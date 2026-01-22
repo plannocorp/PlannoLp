@@ -1,0 +1,126 @@
+<app-header />
+
+<main>
+    <section class="home" id="home">
+        <div class="container hidden-up">
+
+            <h2 class="uppermain-title">Olá, nós somos a</h2>
+            <h1 class="main-title">Planno</h1>
+            <h2 class="undermain-title">A melhor equipe de desenvolvimento Full-Stack</h2>
+
+            <div class="icon-box">
+                <a target="_blank" href="https://github.com/plannocorp"><i class="fab fa-github"></i></a>
+
+                <a target="_blank" href="https://www.instagram.com/planno.br/"><i class="fab fa-instagram"></i></a>
+
+                <a target="_blank" href="https://www.linkedin.com/in/planno-corp-97b5b63a7/"><i class="fab fa-linkedin"></i></a>
+
+                <a target="_blank" href="https://wa.me/5562984458858?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Planno!"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="equipe" id="equipe">
+        <div class="container">
+            <h1 class="main-title hidden-rtl">Equipe</h1>
+
+            <div class="text-box hidden-ltr">
+                <p class="main-text">Somos a Planno, uma equipe freelancer especializada em desenvolvimento Full-Stack, unindo expertise técnica e criatividade para transformar ideias em soluções digitais completas. Nossa stack abrange tecnologias robustas como Java Spring Boot, C# .NET, PostgreSQL e MySQL no backend, garantindo aplicações escaláveis e seguras. No frontend, trabalhamos com Angular, TypeScript, HTML5, CSS3 e SASS para criar interfaces modernas e responsivas. Oferecemos desde landing pages e sites institucionais personalizados até aplicações web complexas, sempre acompanhados de planos de hospedagem e domínio para que sua presença digital esteja completa e profissional. Nosso compromisso é entregar projetos de qualidade, com código limpo, performance otimizada e suporte dedicado. Seja qual for o desafio, estamos prontos para desenvolver a solução ideal para o seu negócio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="trabalhos" id="trabalhos">
+        <div class="container">
+            <h1 class="main-title hidden-ltr">Nossos Trabalhos</h1>
+
+            <div class="card-box hidden-rtl">
+                <a target="_blank" href="https://plannocorp.github.io/VitorLp/">
+                    <div class="card">
+                        <h2 class="card-title">Portifólio Vitor</h2>
+
+                        <img src="images/portifolio-vitor.png" alt="Portifolio Vitor" class="card-img">
+                    </div>
+                </a>
+
+                <a target="_blank" href="http://arquitetaamandaribeiro.com.br/">
+                    <div class="card">
+                        <h2 class="card-title">Arquiteta Amanda Ribeiro</h2>
+
+                        <img src="images/portifolio-amanda.png" alt="Arquiteta Amanda Ribeiro" class="card-img">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="planos" id="planos">
+        <div class="container">
+            <div class="desc-container">
+                <h1 class="main-title hidden-ltr">Planos</h1>
+
+                <p class="main-text hidden-ltr"> Escolha o plano ideal para o seu negócio e tenha acesso a uma infraestrutura completa de hospedagem, domínio e suporte técnico especializado. Todos os nossos planos incluem recursos essenciais para manter sua presença digital profissional e segura.</p>
+
+                <button title="planos" [routerLink]="['/planos']" class="btn hidden-ltr">Conheça os Planos <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="card-container hidden-rtl">
+                <a [routerLink]="['/planos']">
+                    <div class="card">
+                        <h2 class="card-title">Plano Básico</h2>
+
+                        <p class="card-text">R$ 65,99/mês</p>
+                    </div>
+                </a>
+
+                <a [routerLink]="['/planos']">
+                    <div class="card">
+                        <h2 class="card-title">Plano Intermediário</h2>
+
+                        <p class="card-text">R$ 129,99/mês</p>
+                    </div>
+                </a>
+
+                <a [routerLink]="['/planos']">
+                    <div class="card">
+                        <h2 class="card-title">Plano Enterprise</h2>
+
+                        <p class="card-text">R$ 259,99/mês</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <div class="container hidden-ltr">
+            <div class="form-container">
+                <h1 class="main-title">Contato</h1>
+
+                <form (ngSubmit)="send()" class="form">
+                    <input [(ngModel)]="form.name" placeholder="Nome" type="text" name="nome" id="nome">
+
+                    <input [(ngModel)]="form.email" placeholder="Email" type="email" name="email" id="email">
+
+                    <input [(ngModel)]="form.subject" placeholder="Assunto" type="text" name="Assunto" id="assunto">
+
+                    <textarea [(ngModel)]="form.message" placeholder="Descrição" name="Desc" id="desc"></textarea>
+
+                    <input [disabled]="isSubmitting" id="btn" class="btn" type="submit" [value]="buttonText">
+                </form>
+            </div>
+
+            <div class="icons-box">
+                <a target="_blank" href="https://www.instagram.com/planno.br/"><i class="fab fa-instagram"></i></a>
+
+                <a target="_blank" href="https://wa.me/5562984458858?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Planno!"><i class="fab fa-whatsapp"></i></a>
+
+                <a target="_blank" href="https://github.com/plannocorp"><i class="fab fa-github"></i></a>
+
+                <a target="_blank" href="https://www.linkedin.com/in/planno-corp-97b5b63a7/"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<app-footer />

@@ -1,0 +1,69 @@
+<app-header-alt />
+
+<div class="planos-container">
+    <section class="basico">
+        <h1 class="main-title">Plano Básico</h1>
+
+        <p class="main-text">Ideal para pequenos negócios e profissionais autônomos. Por apenas R$ 65,99/mês ou R$ 672,99/ano (economize 15%), você obtém hospedagem completa, domínio personalizado, backups trimestrais e suporte técnico via WhatsApp. Inclui 400 e-mails diários, 50 mensagens de WhatsApp para automação e certificado SSL para segurança total do seu site.</p>
+
+        <div class="plano-opcoes">
+            <div class="toggle-container">
+                <span [class.active]="!isAnualBasico">Mensal</span>
+                <label class="toggle">
+                    <input type="checkbox" (change)="togglePlanoBasico()" [checked]="isAnualBasico">
+                    <span class="slider"></span>
+                </label>
+                <span [class.active]="isAnualBasico">Anual</span>
+            </div>
+            <a target="_blank" [href]="isAnualBasico ? planos[0].basico_anual : planos[0].basico_mensal">
+                <button class="btn">Assinar</button>
+            </a>
+        </div>
+
+        <button (click)="scrollToSection('intermediario')" class="down-btn"><i class="fas fa-arrow-down"></i></button>
+    </section>
+
+    <section id="intermediario" class="intermediario">
+        <h1 class="main-title">Plano Intermediário</h1>
+
+        <p class="main-text">Perfeito para empresas em crescimento que precisam de mais recursos. Por R$ 129,99/mês ou R$ 1.325,88/ano (economize 15%), oferecemos hospedagem premium, backups mensais automáticos e suporte prioritário com resposta em até 12h. Desfrute de 4.000 e-mails diários, 500 mensagens de WhatsApp para automação e uma alteração de estilo mensal para manter seu site sempre atualizado.</p>
+
+        <div class="plano-opcoes">
+            <div class="toggle-container">
+                <span [class.active]="!isAnualIntermediario">Mensal</span>
+                <label class="toggle">
+                    <input type="checkbox" (change)="togglePlanoIntermediario()" [checked]="isAnualIntermediario">
+                    <span class="slider"></span>
+                </label>
+                <span [class.active]="isAnualIntermediario">Anual</span>
+            </div>
+            <a target="_blank" [href]="isAnualIntermediario ? planos[0].intermediario_anual : planos[0].intermediario_mensal">
+                <button class="btn">Assinar</button>
+            </a>
+        </div>
+
+        <button (click)="scrollToSection('enterprise')" class="down-btn"><i class="fas fa-arrow-down"></i></button>
+    </section>
+
+    <section id="enterprise" class="enterprise">
+        <h1 class="main-title">Plano Enterprise</h1>
+
+        <p class="main-text">Solução completa para empresas estabelecidas que exigem o máximo em performance e suporte. Por R$ 259,99/mês ou R$ 2.651,88/ano (economize 15%), garantimos hospedagem de alta performance, backups semanais, suporte VIP com resposta em até 6h e 40.000 e-mails diários. Inclui 5.000 mensagens de WhatsApp para automação, três alterações mensais de estilo, certificado SSL Premium e relatórios analíticos detalhados.</p>
+
+        <div class="plano-opcoes">
+            <div class="toggle-container">
+                <span [class.active]="!isAnualEnterprise">Mensal</span>
+                <label class="toggle">
+                    <input type="checkbox" (change)="togglePlanoEnterprise()" [checked]="isAnualEnterprise">
+                    <span class="slider"></span>
+                </label>
+                <span [class.active]="isAnualEnterprise">Anual</span>
+            </div>
+            <a target="_blank" [href]="isAnualEnterprise ? planos[0].enterprise_anual : planos[0].enterprise_mensal">
+                <button class="btn">Assinar</button>
+            </a>
+        </div>
+    </section>
+</div>
+
+<app-footer />

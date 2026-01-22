@@ -1,0 +1,17 @@
+<header>
+    <a [routerLink]="['/']"><i class="fas fa-code logo"></i></a>
+
+    <nav>
+        <li>
+            <a [routerLink]="['/']">Retornar</a>
+        </li>
+    </nav>
+
+    <i (click)="toggleMenu()" [class]="iconClass"></i>
+
+    <div class="mobile-menu" [class.active]="menuAberto">
+        <li>
+            <a [routerLink]="['/']">Retornar</a>
+        </li>
+    </div>
+</header>

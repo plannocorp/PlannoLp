@@ -1,0 +1,421 @@
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .container {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+
+.home .container .uppermain-title {
+    color: var(--mainblue);
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.home .container .main-title {
+    color: var(--mainblue);
+    font-family: 'BBH Bartle';
+    font-size: 80px;
+    transition: all 0.6s ease;
+    cursor: pointer;
+    animation: textNoir 3s linear infinite;
+}
+
+@keyframes textNoir {
+    0% {
+        text-shadow: 0 0 0px var(--mainblue);
+    }
+
+    50% {
+        text-shadow: 0 0 10px var(--mainblue);
+    }
+
+    100% {
+        text-shadow: 0 0 0px var(--mainblue);
+    }
+}
+
+.home .container .main-title:hover {
+    letter-spacing: 50px;
+}
+
+.home .container .undermain-title {
+    color: var(--mainblue);
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.home .container .icon-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.home .container .icon-box i {
+    color: var(--mainblue);
+    font-size: 20px;
+    padding: 10px;
+    border: solid 2px var(--mainblue);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+}
+
+.home .container .icon-box i:hover {
+    background-color: var(--mainblue);
+    color: var(--shadow);
+    box-shadow: 0 2px 10px var(--mainblue);
+    transform: translateY(-8px);
+}
+
+
+
+
+
+
+
+.equipe .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px 0 0;
+    height: 100vh;
+}
+
+.equipe .container .main-title {
+    color: var(--mainblue);
+    font-size: 120px;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.equipe .container .main-title:hover {
+    letter-spacing: 15px;
+}
+
+.equipe .container .text-box {
+    width: 65%;
+    height: 70%;
+    background-color: transparent;
+    background: var(--mainblue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 350px 350px 0;
+}
+
+.equipe .container .text-box .main-text {
+    font-size: 20px;
+    width: 70%;
+    color: var(--shadow);
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+.trabalhos {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.trabalhos .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+}
+
+.trabalhos .container .main-title {
+    font-size: 80px;
+    color: var(--mainblue);
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.trabalhos .container .main-title:hover {
+    letter-spacing: 15px;
+}
+
+.trabalhos .container .card-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.trabalhos .container .card {
+    width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.trabalhos .container .card:hover {
+    transform: translateY(-10px);
+}
+
+.trabalhos .container .card .card-title {
+    color: var(--mainblue);
+    z-index: 2;
+    text-align: center;
+}
+
+.trabalhos .container .card .card-img {
+    width: 100%;
+    border: solid 3px var(--mainblue);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+.planos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.planos .container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.planos .container .desc-container {
+    width: 700px;
+}
+
+.planos .container .main-title {
+    color: var(--mainblue);
+    font-size: 120px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.planos .container .main-title:hover {
+    letter-spacing: 15px;
+}
+
+.planos .container .main-text {
+    color: var(--mainblue);
+    width: 100%;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.planos .container .btn {
+    color: var(--mainblue);
+    border: solid 2px var(--mainblue);
+    background-color: transparent;
+    height: 60px;
+    width: 250px;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.6s ease;
+    margin-top: 35px;
+}
+
+.planos .container .btn:hover {
+    background-color: var(--mainblue);
+    color: var(--shadow);
+}
+
+.planos .container .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.planos .container .card-container .card {
+    background-color: transparent;
+    width: 300px;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+    border: solid 3px var(--mainblue);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s ease;
+    gap: 5px;
+}
+
+.planos .card-container .card:hover {
+    transform: translateY(-8px);
+}
+
+.planos .card-container .card::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--mainblue);
+    transition: all 0.6s ease;
+}
+
+.planos .card-container .card:hover::after {
+    width: 100%;
+}
+
+.planos .card-container .card .card-title {
+    color: var(--mainblue);
+    z-index: 2;
+    transition: all 0.6s ease;
+}
+
+.planos .card-container .card:hover .card-title {
+    color: var(--shadow);
+}
+
+.planos .card-container .card .card-text {
+    color: var(--mainblue);
+    font-size: 20px;
+    z-index: 2;
+    transition: all 0.6s ease;
+}
+
+.planos .card-container .card:hover .card-text {
+    color: var(--shadow);
+}
+
+
+
+
+
+
+
+
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-bottom: 50px;
+}
+
+.contato .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contato .container .main-title {
+    color: var(--mainblue);
+    font-size: 80px;
+}
+
+.contato .container .form-container .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contato .container .form-container .form input {
+    width: 300px;;
+    height: 50px;
+    border: solid 2px var(--mainblue);
+    background-color: transparent;
+    color: var(--mainblue);
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.contato .container .form-container .form textarea {
+    width: 300px;
+    background-color: transparent;
+    border: solid 2px var(--mainblue);
+    border-radius: 5px;
+    height: 100px;
+    color: var(--mainblue);
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.contato .container .form-container .form .btn {
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.6s ease;
+}
+
+.contato .container .form-container .form .btn:hover {
+    transform: translateY(-8px);
+    color: var(--shadow);
+    background-color: var(--mainblue);
+    box-shadow: 0 5px 15px var(--mainblue);
+}
+
+.contato .container .icons-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.contato .container .icons-box i {
+    color: var(--mainblue);
+    font-size: 50px;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.contato .container .icons-box i:hover {
+    scale: 1.1;
+    text-shadow: 0 0 5px var(--mainblue);
+}

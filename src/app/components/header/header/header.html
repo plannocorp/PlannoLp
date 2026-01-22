@@ -1,0 +1,25 @@
+<header>
+    <a [routerLink]="['/']"><i class="fas fa-code logo"></i></a>
+
+    <nav>
+        <li>
+            <a href="#home">Home</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#trabalhos">Trabalhos</a>
+            <a href="#planos">Planos</a>
+            <a href="#contato">Contato</a>
+        </li>
+    </nav>
+
+    <i (click)="toggleMenu()" [class]="iconClass"></i>
+
+    <div class="mobile-menu" [class.active]="menuAberto">
+        <li>
+            <a href="">Home</a>
+            <a href="">Equipe</a>
+            <a href="">Trabalhos</a>
+            <a href="">Planos</a>
+            <a href="">Contato</a>
+        </li>
+    </div>
+</header>
