@@ -10,6 +10,64 @@ import { RouterLink } from "@angular/router";
   styleUrl: './planos.css',
 })
 export class Planos {
+  //Animações
+  public upObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-up');
+        entry.target.classList.remove('hidden-up');
+      } else {
+        entry.target.classList.add('hidden-up');
+        entry.target.classList.remove('show-up');
+      }
+    });
+  });
+
+  public leftToRightObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-ltr');
+        entry.target.classList.remove('hidden-ltr');
+      } else {
+        entry.target.classList.add('hidden-ltr');
+        entry.target.classList.remove('show-ltr');
+      }
+    });
+  });
+
+  public rightToLeftObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-rtl');
+        entry.target.classList.remove('hidden-rtl');
+      } else {
+        entry.target.classList.add('hidden-rtl');
+        entry.target.classList.remove('show-rtl');
+      }
+    });
+  });
+
+  public upElements!: NodeListOf<Element>;
+  public leftToRightElements!: NodeListOf<Element>;
+  public rightToLeftElements!: NodeListOf<Element>;
+
+  ngOnInit() {
+    this.upElements = document.querySelectorAll('.hidden-up');
+    this.upElements.forEach((el) => {
+      this.upObserver.observe(el);
+    });
+
+    this.leftToRightElements = document.querySelectorAll('.hidden-ltr');
+    this.leftToRightElements.forEach((el) => {
+      this.leftToRightObserver.observe(el);
+    });
+
+    this.rightToLeftElements = document.querySelectorAll('.hidden-rtl');
+    this.rightToLeftElements.forEach((el) => {
+      this.rightToLeftObserver.observe(el);
+    });
+  }
+
   // Estados para controlar qual plano está selecionado (mensal ou anual)
   isAnualBasico: boolean = false;
   isAnualIntermediario: boolean = false;

@@ -155,3 +155,78 @@ input:checked + .slider:before {
     background-color: var(--mainblue);
     color: var(--shadow);
 }
+
+/* TABLET E DISPOSITIVOS MÉDIOS (768px ou menos) */
+@media screen and (max-width: 768px) {
+  .basico,
+  .intermediario,
+  .enterprise {
+    min-height: auto;
+    padding: 60px 20px;
+    gap: 20px;
+  }
+  
+  .main-title {
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 0;
+  }
+  
+  .main-title:hover {
+    letter-spacing: 5px;
+  }
+  
+  .main-text {
+    width: 80%;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: justify;
+  }
+  
+  .plano-opcoes {
+    margin-top: 30px;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .toggle-container {
+    gap: 8px;
+  }
+  
+  .toggle-container span {
+    font-size: 14px;
+  }
+  
+  .toggle {
+    width: 50px;
+    height: 26px;
+  }
+  
+  .slider:before {
+    height: 18px;
+    width: 18px;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  
+  .btn {
+    height: 50px;
+    width: 220px;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  .down-btn {
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    margin-top: 40px;
+  }
+  
+  .intermediario,
+  .enterprise {
+    min-height: 90vh;
+  }
+}

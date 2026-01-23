@@ -81,6 +81,56 @@ main {
     transform: translateY(-8px);
 }
 
+/* TABLET E DISPOSITIVOS MÉDIOS (768px ou menos) */
+@media screen and (max-width: 768px) {
+    .home .container {
+        height: 85vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5vh;
+    }
+
+    .home .container .uppermain-title {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .home .container .main-title {
+        font-size: 2.5em;
+        text-align: center;
+        white-space: nowrap;
+        letter-spacing: 0;
+    }
+
+    .home .container .main-title:hover {
+        letter-spacing: 0;
+    }
+
+    .home .container .undermain-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: center;
+        max-width: 90%;
+        line-height: 1.4;
+    }
+
+    .home .container .icon-box {
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .home .container .icon-box i {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
 
 
 
@@ -125,6 +175,76 @@ main {
     color: var(--shadow);
     text-align: justify;
 }
+
+/* NOTEBOOKS E TELAS MÉDIAS (1280px ou menos) */
+@media screen and (max-width: 1280px) {
+    .equipe .container {
+        padding: 0 50px 0 0;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    .equipe .container .main-title {
+        font-size: 90px;
+    }
+
+    .equipe .container .main-title:hover {
+        letter-spacing: 10px;
+    }
+
+    .equipe .container .text-box {
+        width: 70%;
+        height: 65%;
+        border-radius: 0 300px 300px 0;
+        padding: 30px;
+    }
+
+    .equipe .container .text-box .main-text {
+        font-size: 16px;
+        width: 75%;
+        line-height: 1.7;
+    }
+}
+
+/* TABLET E DISPOSITIVOS MÉDIOS (768px ou menos) */
+@media screen and (max-width: 768px) {
+    .equipe .container {
+        flex-direction: column;
+        padding: 40px 30px;
+        height: auto;
+        min-height: 100vh;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .equipe .container .main-title {
+        font-size: 60px;
+        text-align: center;
+        letter-spacing: 0;
+        margin: 0;
+    }
+
+    .equipe .container .main-title:hover {
+        letter-spacing: 5px;
+    }
+
+    .equipe .container .text-box {
+        width: 100%;
+        height: auto;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .equipe .container .text-box .main-text {
+        font-size: 15px;
+        width: 100%;
+        color: var(--mainblue);
+        text-align: justify;
+        line-height: 1.8;
+    }
+}
+
 
 
 
@@ -196,6 +316,46 @@ main {
     border: solid 3px var(--mainblue);
     border-radius: 20px;
 }
+
+/* TABLET E DISPOSITIVOS MÉDIOS (768px ou menos) */
+@media screen and (max-width: 768px) {
+    .trabalhos {
+        padding: 60px 0;
+        margin-top: 75px;
+    }
+    
+    .trabalhos .container {
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .trabalhos .container .main-title {
+        font-size: 2.5em;
+        text-align: center;
+        letter-spacing: 0;
+    }
+    
+    .trabalhos .container .main-title:hover {
+        letter-spacing: 5px;
+    }
+    
+    .trabalhos .container .card-box {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .trabalhos .container .card {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .trabalhos .container .card .card-title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+}
+
+
 
 
 
@@ -326,6 +486,60 @@ main {
     color: var(--shadow);
 }
 
+/* TABLET E DISPOSITIVOS MÉDIOS (768px ou menos) */
+@media screen and (max-width: 768px) {
+    .planos {
+        padding: 60px 0;
+    }
+
+    .planos .container {
+        height: auto;
+        min-height: 60vh;
+        padding: 40px 30px;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .planos .container .desc-container {
+        width: 90%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .planos .container .main-title {
+        font-size: 50px;
+        text-align: center;
+        letter-spacing: 0;
+    }
+
+    .planos .container .main-title:hover {
+        letter-spacing: 5px;
+    }
+
+    .planos .container .main-text {
+        font-size: 14px;
+        text-align: justify;
+        line-height: 1.8;
+    }
+
+    .planos .container .btn {
+        height: 50px;
+        width: 220px;
+        font-size: 15px;
+        margin: 25px auto 0;
+    }
+
+    .planos .container .card-container {
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+}
+
 
 
 
@@ -418,4 +632,56 @@ main {
 .contato .container .icons-box i:hover {
     scale: 1.1;
     text-shadow: 0 0 5px var(--mainblue);
+}
+
+/* TABLET E DISPOSITIVOS MÉDIOS (768px ou menos) */
+@media screen and (max-width: 768px) {
+    .contato {
+        height: auto;
+        min-height: 100vh;
+        padding: 60px 0;
+        margin-bottom: 0;
+    }
+
+    .contato .container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .contato .container .form-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato .container .main-title {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contato .container .form-container .form {
+        width: 100%;
+    }
+
+    .contato .container .form-container .form input,
+    .contato .container .form-container .form textarea {
+        width: 100%;
+        max-width: 320px;
+        font-size: 16px;
+    }
+
+    .contato .container .icons-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .contato .container .icons-box i {
+        font-size: 35px;
+    }
 }

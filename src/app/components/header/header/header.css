@@ -86,7 +86,7 @@ header .mobile-menu.active li {
     padding: 40px 0;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1650px) {
     header .logo {
         font-size: 50px;
     }
