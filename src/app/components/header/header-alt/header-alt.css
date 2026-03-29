@@ -4,20 +4,16 @@ header {
     align-items: center;
     justify-content: space-around;
     height: 15vh;
-    background-color: var(--shadow);
+    background-color: var(--black-background);
 }
 
 header .logo {
-    color: var(--mainblue);
-    font-size: 80px;
-    cursor: pointer;
+    width: 125px;
     transition: all 0.6s ease;
-    z-index: 1000;
 }
 
 header .logo:hover {
-    scale: 1.1;
-    text-shadow: 0 0 10px var(--mainblue);
+    scale: 1.2;
 }
 
 header li {
@@ -87,6 +83,12 @@ header .mobile-menu.active li {
 }
 
 @media screen and (max-width:1200px) {
+    header {
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 100px 0 70px;
+    }
+
     header .logo {
         font-size: 50px;
     }

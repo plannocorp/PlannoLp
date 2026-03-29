@@ -57,6 +57,20 @@ export class Main implements OnInit {
     });
   });
 
+  public appearsObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-ap');
+        entry.target.classList.remove('hidden-ap');
+      }
+      else {
+        entry.target.classList.add('hidden-ap');
+        entry.target.classList.remove('show-ap');
+      }
+    });
+  });
+
+  public appearsElements!: NodeListOf<Element>;
   public upElements!: NodeListOf<Element>;
   public leftToRightElements!: NodeListOf<Element>;
   public rightToLeftElements!: NodeListOf<Element>;
@@ -75,6 +89,11 @@ export class Main implements OnInit {
     this.rightToLeftElements = document.querySelectorAll('.hidden-rtl');
     this.rightToLeftElements.forEach((el) => {
       this.rightToLeftObserver.observe(el);
+    });
+
+    this.appearsElements = document.querySelectorAll('.hidden-ap');
+    this.appearsElements.forEach((el) => {
+      this.appearsObserver.observe(el);
     });
   }
 
