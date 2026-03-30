@@ -37,7 +37,7 @@ main {
     }
 
     50% {
-        text-shadow: 0 0 10px var(--mainblue);
+        text-shadow: 0 0 6px var(--mainblue);
     }
 
     100% {
@@ -84,7 +84,7 @@ main {
 /* TABLET E DISPOSITIVOS MÉDIOS (768px ou menos) */
 @media screen and (max-width: 768px) {
     .home .container {
-        height: 85vh;
+        height: 75vh;
         width: 100%;
         padding: 0;
         margin: 0;
@@ -103,7 +103,7 @@ main {
     }
 
     .home .container .main-title {
-        font-size: 50px;
+        font-size: 45px;
         text-align: center;
         white-space: nowrap;
         letter-spacing: 0;
@@ -275,6 +275,10 @@ main {
 @media screen and (max-width: 1000px) {
     .equipe .container .img-box {
         flex-direction: column;
+    }
+
+    .equipe .container .img-box .card {
+        width: 85%;
     }
 }
 
@@ -464,7 +468,7 @@ main {
     }
 
     .servicos .main-title {
-        font-size: 50px;
+        font-size: 30px;
     }
 
     .servicos .service-item {
@@ -472,7 +476,6 @@ main {
         justify-content: center;
         text-align: center;
         gap: 25px;
-        padding: 30px 25px;
     }
 
     .servicos .service-icon {
@@ -634,7 +637,7 @@ main {
     }
 
     .planos .main-title {
-        font-size: 50px;
+        font-size: 30px;
     }
 
     .planos .container .card-box {
@@ -643,7 +646,7 @@ main {
     }
 
     .planos .container .card {
-        width: 100%;
+        width: 85%;
         max-width: 350px;
         height: 420px;
         padding: 40px 25px 35px;
@@ -664,7 +667,7 @@ main {
 
 @media screen and (max-width: 480px) {
     .planos .main-title {
-        font-size: 40px;
+        font-size: 30px;
     }
     
     .planos .container .card {
@@ -683,6 +686,7 @@ main {
 
 
 .contato .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -828,6 +832,29 @@ main {
     }
 }
 
+.contato .container .right-logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -120%;
+    opacity: 0.07;
+}
+
+.contato .container .left-logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1);
+    left: 100%;
+    opacity: 0.07;
+}
+
+@media screen and (max-width: 1250px) {
+    .contato .container .right-logo,
+    .contato .container .left-logo {
+        display: none;
+    }
+}
+
 /* RESPONSIVO */
 @media screen and (max-width: 768px) {
     .contato .container {
@@ -859,6 +886,11 @@ main {
         height: 70px;
         font-size: 24px;
     }
+
+    .contato .container .right-logo,
+    .contato .container .left-logo {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -881,5 +913,10 @@ main {
         width: 65px;
         height: 65px;
         font-size: 22px;
+    }
+
+    .contato .container .right-logo,
+    .contato .container .left-logo {
+        display: none;
     }
 }
