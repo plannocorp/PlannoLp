@@ -44,14 +44,13 @@ header li a::after {
     width: 0;
     height: 2px;
     top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0%;
     background-color: var(--mainblue);
     transition: all 0.6s ease;
 }
 
 header li a:hover::after {
-    width: 50%;
+    width: 100%;
 }
 
 header .mobile-menu-icon {

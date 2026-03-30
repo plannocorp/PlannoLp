@@ -105,10 +105,11 @@
 
 .features-list li {
   color: var(--white);
-  font-size: 15px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 10px;
+  text-align: start;
 }
 
 .features-list li i {
@@ -156,7 +157,7 @@
 /* ─── Badge de desconto ─────────────────────────────────── */
 .discount-badge {
   background: var(--mainblue);
-  color: var(--black-background);
+  color: var(--black-background) !important;
   font-size: 11px;
   font-weight: 800;
   padding: 2px 7px;

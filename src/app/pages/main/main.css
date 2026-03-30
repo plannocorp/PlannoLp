@@ -606,6 +606,7 @@ main {
     margin: 12px 0;
     line-height: 1.5;
     opacity: 0.9;
+    text-align: start;
 }
 
 .planos .container .card-price {
