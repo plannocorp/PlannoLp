@@ -1,17 +1,23 @@
 <header>
-    <a [routerLink]="['/']"><img class="logo" src="images/Logo.png" alt="Planno Logo"></a>
+    <a class="brand" [routerLink]="['/']">
+        <img class="logo" src="images/Logo.png" alt="Planno Logo">
+    </a>
 
     <nav>
-        <li>
-            <a [routerLink]="['/']">Retornar</a>
-        </li>
+        <ul>
+            <li><a [routerLink]="['/']">Início</a></li>
+            <li><a [routerLink]="['/planos']">Planos</a></li>
+            <li><a class="header-cta" [routerLink]="['/']" fragment="contato">Assinar agora</a></li>
+        </ul>
     </nav>
 
     <i (click)="toggleMenu()" [class]="iconClass"></i>
 
     <div class="mobile-menu" [class.active]="menuAberto">
-        <li>
-            <a [routerLink]="['/']">Retornar</a>
-        </li>
+        <ul>
+            <li><a (click)="toggleMenu()" [routerLink]="['/']">Início</a></li>
+            <li><a (click)="toggleMenu()" [routerLink]="['/planos']">Planos</a></li>
+            <li><a (click)="toggleMenu()" class="header-cta" [routerLink]="['/']" fragment="contato">Assinar agora</a></li>
+        </ul>
     </div>
 </header>

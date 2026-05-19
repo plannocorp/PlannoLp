@@ -1,152 +1,218 @@
 <app-header-alt />
 
-<div class="planos-container">
-  <section id="basico" class="plano-section basico">
-    <div class="plano-inner">
-      <div class="plano-content">
-        <h1 class="main-title">Básico</h1>
-        <p class="main-text">
-          Ideal para pequenos negócios e profissionais autônomos. Hospedagem completa, domínio
-          personalizado, backups trimestrais e suporte técnico via WhatsApp. Inclui 400 e-mails
-          diários, 50 mensagens de WhatsApp para automação e certificado SSL.
-        </p>
-        <ul class="features-list">
-          <li><i class="fas fa-check"></i> Landing Page + Hospedagem + SSL</li>
-          <li><i class="fas fa-check"></i> 400 e-mails/dia + 50 WhatsApp</li>
-          <li><i class="fas fa-check"></i> Backup trimestral + Suporte 24h</li>
-        </ul>
-        <div class="plano-opcoes">
-          <div class="toggle-container">
-            <span [class.active]="!isAnualBasico">Mensal</span>
-            <label class="toggle">
-              <input type="checkbox" (change)="togglePlanoBasico()" [checked]="isAnualBasico" />
-              <span class="slider"></span>
-            </label>
-            <span [class.active]="isAnualBasico"
-              >Anual <span class="discount-badge">−15%</span></span
-            >
-          </div>
-          <div class="price-display">
-            <span class="price-value">{{ isAnualBasico ? 'R$ 672,99' : 'R$ 65,99' }}</span>
-            <span class="price-period">{{ isAnualBasico ? '/ano' : '/mês' }}</span>
-          </div>
-          <a
-            target="_blank"
-            [href]="isAnualBasico ? planos[0].basico_anual : planos[0].basico_mensal"
-          >
-            <button class="btn">Assinar Agora</button>
-          </a>
-        </div>
-      </div>
-      <div class="plano-deco" aria-hidden="true">
-        <span class="deco-number">01</span>
-      </div>
+<main class="planos-page">
+  <section class="plans-hero">
+    <div class="container">
+      <span class="section-badge"><i class="fas fa-circle"></i> Planos Planno</span>
+
+      <h1 class="main-title">Escolha entre presença digital e operação de venda online.</h1>
+
+      <p class="main-desc">
+        Se você precisa apresentar uma marca, captar contatos ou publicar conteúdo, comece por
+        hospedagem básica. Se precisa vender produtos, receber pagamentos e organizar a operação,
+        escolha um plano de ecommerce.
+      </p>
     </div>
-    <button (click)="scrollToSection('intermediario')" class="down-btn">
-      <i class="fas fa-arrow-down"></i>
-    </button>
   </section>
 
-  <section id="intermediario" class="plano-section intermediario">
-    <div class="plano-inner reverse">
-      <div class="plano-content">
-        <h1 class="main-title">Intermediário</h1>
-        <p class="main-text">
-          Perfeito para empresas em crescimento. Hospedagem premium, backups mensais automáticos e
-          suporte prioritário com resposta em até 12h. 4.000 e-mails diários, 500 mensagens de
-          WhatsApp e uma alteração de estilo mensal.
+  <section class="plan-types">
+    <div class="container">
+      <div class="card">
+        <span class="plan-label">Hospedagem básica</span>
+
+        <h2 class="card-title">Sites institucionais, blogs, pessoais e landing pages</h2>
+
+        <p class="card-desc">
+          Para quem precisa de um site rápido, profissional e mantido pela Planno. Ideal para
+          autoridade, campanhas, portfólio, conteúdo e captação de leads.
         </p>
-        <ul class="features-list">
-          <li><i class="fas fa-check"></i> Site + API + VPS + domínio grátis</li>
-          <li><i class="fas fa-check"></i> 4.000 e-mails/dia + 500 WhatsApp</li>
-          <li><i class="fas fa-check"></i> 1 alteração/mês + Backup mensal</li>
-        </ul>
-        <div class="plano-opcoes">
-          <div class="toggle-container">
-            <span [class.active]="!isAnualIntermediario">Mensal</span>
-            <label class="toggle">
-              <input
-                type="checkbox"
-                (change)="togglePlanoIntermediario()"
-                [checked]="isAnualIntermediario"
-              />
-              <span class="slider"></span>
-            </label>
-            <span [class.active]="isAnualIntermediario"
-              >Anual <span class="discount-badge">−15%</span></span
-            >
-          </div>
-          <div class="price-display">
-            <span class="price-value">{{
-              isAnualIntermediario ? 'R$ 1.325,88' : 'R$ 129,99'
-            }}</span>
-            <span class="price-period">{{ isAnualIntermediario ? '/ano' : '/mês' }}</span>
-          </div>
-          <a
-            target="_blank"
-            [href]="
-              isAnualIntermediario ? planos[0].intermediario_anual : planos[0].intermediario_mensal
-            "
-          >
-            <button class="btn">Assinar Agora</button>
-          </a>
+
+        <div class="feature-list">
+          <span><i class="fas fa-check"></i> Hospedagem, SSL e manutenção técnica</span>
+          <span><i class="fas fa-check"></i> Estrutura para páginas institucionais e campanhas</span>
+          <span><i class="fas fa-check"></i> Melhor opção quando não existe operação de loja</span>
         </div>
+
+        <a class="card-action" href="/#contato">Solicitar orçamento <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="plano-deco" aria-hidden="true">
-        <span class="deco-number">02</span>
+
+      <div class="card featured-card">
+        <span class="plan-label">Ecommerce</span>
+
+        <h2 class="card-title">Lojas online com produtos, frete e pagamento</h2>
+
+        <p class="card-desc">
+          Para quem precisa vender online com estrutura de loja. Os planos Start, Pro e Premium
+          incluem domínio .com.br e manutenção para você focar na venda.
+        </p>
+
+        <div class="feature-list">
+          <span><i class="fas fa-check"></i> Mercado Pago, frete automático e notificações</span>
+          <span><i class="fas fa-check"></i> Catálogo de produtos e evolução por estoque</span>
+          <span><i class="fas fa-check"></i> Recursos avançados conforme o plano escolhido</span>
+        </div>
+
+        <a class="card-action" href="#ecommerce">Comparar ecommerces <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
-    <button (click)="scrollToSection('enterprise')" class="down-btn">
-      <i class="fas fa-arrow-down"></i>
-    </button>
   </section>
 
-  <section id="enterprise" class="plano-section enterprise">
-    <div class="plano-inner">
-      <div class="plano-content">
-        <h1 class="main-title">Enterprise</h1>
-        <p class="main-text">
-          Solução completa para empresas que exigem o máximo. Hospedagem de alta performance,
-          backups semanais, suporte VIP com resposta em até 6h, 40.000 e-mails diários, 5.000
-          mensagens de WhatsApp e relatórios analíticos.
+  <section class="use-cases">
+    <div class="container">
+      <div class="text-box">
+        <span class="section-badge"><i class="fas fa-circle"></i> O que fazemos</span>
+
+        <h2 class="main-title">Um plano para cada tipo de presença online.</h2>
+
+        <p class="main-desc">
+          O desenvolvimento da landing page ou site é definido por proposta, após um questionário
+          estratégico. Depois da entrega, você escolhe um plano mensal ou anual para manter tudo no
+          ar com domínio, hospedagem, segurança e suporte.
         </p>
-        <ul class="features-list">
-          <li><i class="fas fa-check"></i> Full-Stack + DevOps + SSL Premium</li>
-          <li><i class="fas fa-check"></i> 40.000 e-mails/dia + 5.000 WhatsApp</li>
-          <li><i class="fas fa-check"></i> 3 alterações/mês + Analytics 24/7</li>
-        </ul>
-        <div class="plano-opcoes">
-          <div class="toggle-container">
-            <span [class.active]="!isAnualEnterprise">Mensal</span>
-            <label class="toggle">
-              <input
-                type="checkbox"
-                (change)="togglePlanoEnterprise()"
-                [checked]="isAnualEnterprise"
-              />
-              <span class="slider"></span>
-            </label>
-            <span [class.active]="isAnualEnterprise"
-              >Anual <span class="discount-badge">−15%</span></span
-            >
-          </div>
-          <div class="price-display">
-            <span class="price-value">{{ isAnualEnterprise ? 'R$ 2.651,88' : 'R$ 259,99' }}</span>
-            <span class="price-period">{{ isAnualEnterprise ? '/ano' : '/mês' }}</span>
-          </div>
-          <a
-            target="_blank"
-            [href]="isAnualEnterprise ? planos[0].enterprise_anual : planos[0].enterprise_mensal"
-          >
-            <button class="btn">Assinar Agora</button>
-          </a>
+      </div>
+
+      <div class="hosting-plans">
+        <div class="card">
+          <span class="plan-label">Hospedagem básica</span>
+
+          <h3 class="card-title">Básico</h3>
+
+          <p class="card-desc"><i class="fas fa-check"></i> Hospedagem profissional incluída</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Domínio com verificação de disponibilidade</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Backup trimestral automático</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Suporte via WhatsApp em até 24h</p>
+          <p class="card-desc"><i class="fas fa-check"></i> 400 emails/dia e 50 notificações WhatsApp/dia</p>
+          <p class="card-desc"><i class="fas fa-check"></i> SSL e atualizações de segurança</p>
+
+          <strong class="card-price">R$ 65,99<span>/mês</span></strong>
+          <span class="annual-price">ou R$ 672,99/ano com 15% OFF</span>
+        </div>
+
+        <div class="card featured-card">
+          <span class="plan-label">Mais indicado</span>
+
+          <h3 class="card-title">Intermediário</h3>
+
+          <p class="card-desc"><i class="fas fa-check"></i> Tudo do Básico</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Backup mensal automático</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Suporte prioritário em até 12h</p>
+          <p class="card-desc"><i class="fas fa-check"></i> 4.000 emails/dia e 500 notificações WhatsApp/dia</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Até 1 alteração estilo-template/mês</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Otimização mensal de velocidade</p>
+
+          <strong class="card-price">R$ 129,99<span>/mês</span></strong>
+          <span class="annual-price">ou R$ 1.325,88/ano com 15% OFF</span>
+        </div>
+
+        <div class="card">
+          <span class="plan-label">Alta demanda</span>
+
+          <h3 class="card-title">Enterprise</h3>
+
+          <p class="card-desc"><i class="fas fa-check"></i> Tudo do Intermediário</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Backup semanal automático</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Suporte VIP em até 6h</p>
+          <p class="card-desc"><i class="fas fa-check"></i> 40.000 emails/dia e 5.000 notificações WhatsApp/dia</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Até 3 alterações estilo-template/mês</p>
+          <p class="card-desc"><i class="fas fa-check"></i> SSL Premium, relatório mensal e monitoramento de uptime</p>
+
+          <strong class="card-price">R$ 259,99<span>/mês</span></strong>
+          <span class="annual-price">ou R$ 2.651,88/ano com 15% OFF</span>
         </div>
       </div>
-      <div class="plano-deco" aria-hidden="true">
-        <span class="deco-number">03</span>
+
+      <div class="card-box">
+        <div class="card">
+          <h3 class="card-title">Institucionais</h3>
+          <p class="card-desc">Sites para empresas, profissionais liberais e marcas locais.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Landing pages</h3>
+          <p class="card-desc">Páginas focadas em campanha, anúncio, lançamento ou captação.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Blogs e conteúdo</h3>
+          <p class="card-desc">Estruturas para publicar artigos, novidades e materiais comerciais.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Ecommerces</h3>
+          <p class="card-desc">Lojas para vender produtos com pagamento, frete e automações.</p>
+        </div>
       </div>
     </div>
   </section>
-</div>
+
+  <section class="ecommerce-plans" id="ecommerce">
+    <div class="container">
+      <div class="text-box">
+        <span class="section-badge"><i class="fas fa-circle"></i> Ecommerce mensal</span>
+
+        <h2 class="main-title">Planos para vender produtos online.</h2>
+
+        <p class="main-desc">
+          Escolha pelo tamanho do estoque e pelo nível de automação que sua operação precisa hoje.
+        </p>
+      </div>
+
+      <div class="card-box">
+        <div class="card">
+          <span class="plan-label">Para começar</span>
+
+          <h3 class="card-title">Start</h3>
+
+          <p class="card-desc"><i class="fas fa-check"></i> Até 150 produtos cadastrados</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Frete automático</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Mercado Pago e notificações por e-mail</p>
+
+          <strong class="card-price">R$ 99,90<span>/mês</span></strong>
+        </div>
+
+        <div class="card featured-card">
+          <span class="plan-label">O mais pedido</span>
+
+          <h3 class="card-title">Pro</h3>
+
+          <p class="card-desc"><i class="fas fa-check"></i> Até 500 produtos cadastrados</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Relatórios de lucro e desempenho</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Recuperação de carrinhos abandonados</p>
+
+          <strong class="card-price">R$ 139,90<span>/mês</span></strong>
+        </div>
+
+        <div class="card">
+          <span class="plan-label">Escala total</span>
+
+          <h3 class="card-title">Premium</h3>
+
+          <p class="card-desc"><i class="fas fa-check"></i> Produtos ilimitados</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Automações de e-mail para pós-venda e recompra</p>
+          <p class="card-desc"><i class="fas fa-check"></i> Suporte prioritário</p>
+
+          <strong class="card-price">R$ 259,90<span>/mês</span></strong>
+        </div>
+      </div>
+
+      <div class="plans-note">
+        <span><i class="fas fa-check"></i> Domínio .com.br incluso nos planos de ecommerce.</span>
+        <span><i class="fas fa-check"></i> Manutenção técnica inclusa para reduzir trabalho operacional.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans-cta">
+    <div class="container">
+      <div>
+        <span class="section-badge"><i class="fas fa-circle"></i> Próximo passo</span>
+
+        <h2 class="main-title">Ainda em dúvida entre site simples e ecommerce?</h2>
+      </div>
+
+      <a class="card-action" href="/#contato">Falar com a Planno <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+</main>
 
 <app-footer />
