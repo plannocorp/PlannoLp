@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --configuration production && npx angular-cli-ghpages --dir=dist/plannomain/browser --cname=www.planno.online"
   },
   "prettier": {
     "printWidth": 100,
@@ -41,6 +42,7 @@
     "@angular/cli": "^21.1.0",
     "@angular/compiler-cli": "^21.1.0",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^3.0.3",
     "jasmine-core": "~5.5.0",
     "jsdom": "^27.1.0",
     "karma": "~6.4.0",
