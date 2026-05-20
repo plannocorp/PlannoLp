@@ -119,13 +119,13 @@ main {
     color: var(--white);
     padding: 0 28px;
     background: var(--darkgray);
-    border: 1px solid var(--gray);
+    border: 2px solid var(--gray);
     transition: all 0.6s ease;
 }
 
 .home .secondary-action:hover {
     transform: translateY(-8px);
-    border: 1px solid var(--mainblue);
+    border: 2px solid var(--mainblue);
 }
 
 .home .setup-note {
@@ -605,7 +605,7 @@ main {
     justify-content: center;
     gap: 8px;
     min-height: 58px;
-    padding: 0 34px;
+    padding: 0 20px;
     color: var(--black-background);
     background: var(--mainblue);
     border-radius: 999px;
@@ -641,6 +641,7 @@ main {
 
     .faq .faq-action {
         width: 100%;
+        padding: 0;
     }
 }
 
