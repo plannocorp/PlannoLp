@@ -351,7 +351,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 560px;
+    // Esse valor foi alterado momentâneamente por conta da mudança das fotos dos cards! | valor original: 560px
+    min-height: 320px;
     padding: 28px;
     background: linear-gradient(120deg, var(--black-background), var(--darkgray));
     border: 1px solid var(--gray);
@@ -376,6 +377,7 @@ main {
     transform: translateY(-8px);
 }
 
+/*
 .equipe .card .img {
     width: 100%;
     aspect-ratio: 1 / 0.78;
@@ -391,6 +393,7 @@ main {
     object-fit: contain;
     object-position: bottom center;
 }
+*/
 
 .equipe .card-position {
     color: var(--lightblue);
