@@ -258,6 +258,7 @@ main {
     }
 
     .home .container .main-title {
+        color: var(--white);
         font-size: clamp(42px, 13vw, 58px);
         margin-top: 24px;
     }
@@ -291,11 +292,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 900px;
     width: min(1120px, calc(100% - 48px));
     gap: 42px;
     margin: 0 auto;
-    padding: 90px 0;
+    padding: 50px 0 80px;
 }
 
 .equipe .text-box {
@@ -351,7 +352,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    // Esse valor foi alterado momentâneamente por conta da mudança das fotos dos cards! | valor original: 560px
     min-height: 320px;
     padding: 28px;
     background: linear-gradient(120deg, var(--black-background), var(--darkgray));
@@ -597,6 +597,7 @@ main {
 }
 
 .faq .faq-cta .main-title {
+    color: var(--white);
     max-width: 760px;
     margin-top: 12px;
     font-size: clamp(28px, 3vw, 36px);
@@ -1137,6 +1138,10 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+    .home .setup-note {
+        text-align: center;
+    }
+
     .contato .container {
         width: min(100% - 32px, 1120px);
         padding: 64px 0;
@@ -1160,4 +1165,280 @@ main {
         width: 50px;
         height: 50px;
     }
+}
+
+
+
+/* --- Estilos para as Novas Seções (Adicionados no Passo 3) --- */
+
+/* 1. Barra de Confiança */
+.confidence-bar {
+  background-color: var(--blue-background);
+  padding: 24px 0;
+  border-top: 1px solid var(--darkblue);
+  border-bottom: 1px solid var(--darkblue);
+  width: 100%;
+}
+
+.confidence-items {
+  max-width: 1120px;
+  width: calc(100% - 48px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.confidence-items span {
+  color: var(--lightblue);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confidence-items i {
+  color: var(--mainblue);
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .confidence-items {
+    justify-content: center;
+    gap: 15px 30px;
+  }
+}
+
+/* 2. Seção de Soluções / Grid de Serviços */
+.solucoes {
+  padding: 90px 0;
+  width: 100%;
+}
+
+.solucoes .container {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.solucoes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 45px;
+}
+
+.solucao-card {
+  background: linear-gradient(120deg, var(--black-background), var(--darkgray));
+  border: 1px solid var(--gray);
+  border-radius: 18px;
+  padding: 42px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+}
+
+.solucao-card:hover {
+  border-color: var(--mainblue);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.solucao-card.featured {
+  border-color: var(--mainblue);
+  position: relative;
+}
+
+.solucao-card.featured::after {
+  content: 'Mais Procurado';
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: var(--mainblue);
+  color: var(--black-background);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.solucao-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.solucao-card .icon {
+  font-size: 2rem;
+  color: var(--mainblue);
+}
+
+.solucao-card h2 {
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+.solucao-card p {
+  color: var(--lightblue);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.solucao-card .action-link {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  align-self: flex-start;
+  transition: color 0.3s ease;
+}
+
+.solucao-card .action-link:hover {
+  color: var(--mainblue);
+}
+
+@media screen and (max-width: 900px) {
+  .solucoes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* 3. Seção Detalhes Planno Store (Dores e Soluções) */
+.store-details {
+  background: radial-gradient(circle at top, var(--blue-background) 0%, var(--black-background) 100%);
+  border-top: 1px solid var(--darkblue);
+  padding: 90px 0;
+  width: 100%;
+}
+
+.store-details .container {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.store-details .grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.dores-box h2, .solucoes-box h2 {
+  color: var(--white);
+  font-size: clamp(28px, 3.5vw, 36px);
+  line-height: 1.15;
+  margin: 15px 0 35px 0;
+}
+
+.dor-item, .sol-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.dor-item i {
+  color: #ff5252;
+  font-size: 1.3rem;
+  margin-top: 4px;
+}
+
+.sol-item i {
+  color: #4caf50;
+  font-size: 1.3rem;
+  margin-top: 4px;
+}
+
+.dor-item h3, .sol-item h3 {
+  color: var(--white);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.dor-item p, .sol-item p {
+  color: var(--lightblue);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 968px) {
+  .store-details .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+/* 4. Como Funciona a Implantação */
+.como-funciona {
+  width: 100%;
+  background-color: var(--black-background);
+  border-top: 1px solid var(--gray);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.step-card {
+  background: linear-gradient(120deg, var(--black-background), var(--darkgray));
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+  padding: 36px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  border-color: var(--mainblue);
+}
+
+.step-card .step-num {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--blue-background);
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  opacity: 0.6;
+}
+
+.step-card h3 {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  color: var(--lightblue);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
